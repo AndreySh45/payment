@@ -1,3 +1,4 @@
+<?php require_once 'inc/functions.php'; ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Витрина товаров</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -122,19 +123,19 @@
             <form id="buy" method="POST">
                 <div class="form-group">
                     <label for="name" class="form-label">Ваше имя</label>
-                    <input type="name" class="form-control" id="name" placeholder="Ваше имя">                 
+                    <input type="name" name="name" class="form-control" id="name" placeholder="Ваше имя" required>                 
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Email">
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
                     <label for="product">Выбранный товар</label>
-                    <input type="text" class="form-control" id="product" readonly>
+                    <input type="text" name="product" class="form-control" id="product" readonly>
                 </div>
                 <div class="form-group">
                     <label for="price">Цена</label>
-                    <input type="text" class="form-control" id="price" readonly>
+                    <input type="text" name="price" class="form-control" id="price" readonly>
                 </div>
                 <button type="submit" class="btn btn-primary">Купить</button>
         </form>
