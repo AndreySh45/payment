@@ -19,6 +19,15 @@ if(!empty($_POST)){
     //debug($data);
     $order_id = save('orders', $data);
     //var_dump($order_id);
+    setPaymentData($order_id);
+    header('Location: pages/form.php');
+    die;
+}
+
+function setPaymentData($order_id){
+    if(isset($_SESSION['payment'])) unset($_SESSION['payment']);
+    $_SESSION['payment']['id'] = $order_id;
+    $_SESSION['payment']['price'] = $_POST['price'];
 }
 
 function load($data){
